@@ -1,0 +1,34 @@
+% Define a few objects that are unique to the BST paper
+\input{\ResourcesDir/owner} % Owned by llorracc (draft) or econ-ark (published) ?
+% Allow different actions depending on whether document is being processed as
+% subfile or being process as standalone
+\providecommand{\onlyinsubfile}{}\renewcommand{\onlyinsubfile}[1]{#1}
+\providecommand{\notinsubfile}{}\renewcommand{\notinsubfile}[1]{}
+
+% Control whether subsection is displayed at top of page of PDF 
+\newboolean{showPageHead}
+\setboolean{showPageHead}{true}
+
+% Terms unique to BufferStockTheory paper 
+\newcommand{\usual}{}
+
+\newcommand{\BoydT}{\mathsf{T}} % Contraction mapping operator
+\newcommand{\Shrinker}{\alpha}  % Contraction mapping shrinker
+\providecommand{\boundFunc}{\ensuremath{\digamma}} % Boyd bounding function
+\providecommand{\AMPS}{}\renewcommand{\AMPS}{\avg{\aFunc}^{\prime}} % Average MPS
+\providecommand{\AMPSP}{{\avg{\aFunc}^{\prime\prime}}} % Average MPS prime
+
+\newcommand{\cNrmAvg}{\mathfrak{c}}
+
+% Harmenberg items
+\newcommand{\Nvrnt}{F} % Invariant CDF
+\newcommand{\nvrnt}{f} % invariant PDF
+\newcommand{\Harm}{\tilde} % Harmenberg uses tilde 
+\newcommand{\HarmWide}{\widetilde}
+
+\providecommand{\pHarm}{p} % Probability density of permanent income
+
+% Declare registers for manipulation of tables (to fit page)
+\newsavebox{\TblBox}
+\newlength{\TblShrunk}
+\newsavebox{\TblShrunkBox}
